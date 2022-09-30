@@ -1,0 +1,19 @@
+{
+  "name": "conditional-logic-form",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "repository": "https://github.com/Bluesgavin/conditional-logic-form.git",
+  "author": "GAVIN <610682017@qq.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "rollup --config rollup.config.js --watch"
+  },
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^8.5.0",
+    "rollup": "^2.79.1",
+    "rollup-plugin-scss": "3",
+    "sass": "^1.55.0",
+    "tslib": "^2.4.0",
+    "typescript": "^4.8.4"
+  }
+}

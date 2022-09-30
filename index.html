@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./dist/bundle.css" />
+    <style>
+      #wrap {
+        display: flex;
+      }
+      #form {
+        width: 500px;
+      }
+      #btn {
+        margin-top: 100px;
+      }
+      #data-board {
+        border: 1px #000 solid;
+        margin-left: 20px;
+        width: 400px;
+        overflow: auto;
+        white-space: pre;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div id="form"></div>
+      <div id="data-board"></div>
+    </div>
+    <button id="btn">Get data</button>
+    <script src="./dist/index.js"></script>
+    <script>
+      const $form = document.querySelector('#form');
+      const $board = document.querySelector('#data-board');
+      const list = [
+        {
+          id: 1111,
+          label: '出行方式',
+          list: [
+            {
+              id: 1111,
+              label: 'trip mode',
+            },
+            {
+              id: 222,
+              label: 'flight',
+            },
+          ],
+          conditionValue: 1,
+        },
+        {
+          id: 2222,
+          label: 'type',
+          list: [
+            {
+              id: 1111,
+              label: 'trip mode',
+            },
+            {
+              id: 222,
+              label: 'flight',
+            },
+            {
+              id: 33,
+              label: 'date',
+            },
+          ],
+          conditionValue: 1,
+        },
+      ];
+
+      const conditionalLogicForm = new ConditionalLogic($form, { list });
+      const $btn = document.querySelector('#btn');
+      $btn.addEventListener('click', () => {
+        const data = conditionalLogicForm.getData();
+        $board.innerText = JSON.stringify(data, null, '\t');
+        console.log(data);
+      });
+    </script>
+  </body>
+</html>
