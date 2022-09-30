@@ -8,7 +8,7 @@ a conditional-logic-form that you can use in modern browsers. It's lightweight a
 
 
 ## Demo
-
+you can try it on [online demo](https://bluesgavin.github.io/conditional-logic-form/)
 
 ## Usage
 
